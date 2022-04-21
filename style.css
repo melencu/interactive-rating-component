@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 24%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+.card {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+/* SUBMIT CARD */
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.submit-card {
+  max-width: 360px;
+  background-color: var(--dark-blue);
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.submit-card .star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--medium-grey);
+  border-radius: 50%;
+}
+.submit-card .star img {
+  width: 40%;
+  height: 40%;
+}
+
+.submit-card .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.submit-card .rating-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submit-card .rating-list li {
+  display: grid;
+  place-content: center;
+  list-style: none;
+  height: 48px;
+  width: 48px;
+  line-height: 0.8;
+  border-radius: 50%;
+  background-color: var(--medium-grey);
+  color: var(--light-grey);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.submit-card .rating-list li:hover,
+.submit-card .rating-list li:visited {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.active {
+  background-color: var(--primary-orange) !important;
+  color: var(--white) !important;
+}
+
+.submit-card p {
+  font-size: 15px;
+  color: var(--light-grey);
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  padding: 0.8rem 0;
+  border-radius: 2rem;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn:active {
+  color: var(--primary-orange);
+  background-color: var(--white);
+}
+
+/* THANK YOU CARD */
+.final {
+  display: grid;
+  place-items: center;
+}
+
+.final .given-rating {
+  background-color: var(--medium-grey);
+  color: var(--primary-orange);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.final .given-rating .rating {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.final p {
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.final-text h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER
+.attribution {
+  font-size: 11px;
+  text-align: end;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
