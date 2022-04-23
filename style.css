@@ -14,6 +14,9 @@
   --very-dark-blue: hsl(216, 12%, 8%);
 }
 
+input[type="radio"] {
+  display: none;
+}
 .card {
   min-height: 100vh;
   display: grid;
@@ -68,10 +71,9 @@
   align-items: center;
 }
 
-.submit-card .rating-list li {
+.submit-card .rating-list label {
   display: grid;
   place-content: center;
-  list-style: none;
   height: 48px;
   width: 48px;
   line-height: 0.8;
@@ -82,15 +84,15 @@
   cursor: pointer;
 }
 
-.submit-card .rating-list li:hover,
-.submit-card .rating-list li:visited {
+.submit-card .rating-list label:hover,
+.submit-card .rating-list label:visited {
   background-color: var(--light-grey);
   color: var(--white);
 }
 
-.active {
-  background-color: var(--primary-orange) !important;
-  color: var(--white) !important;
+.submit-card .rating-list input:checked + label {
+  background-color: var(--primary-orange);
+  color: var(--white);
 }
 
 .submit-card p {
@@ -104,17 +106,18 @@
   border: none;
   padding: 0.8rem 0;
   border-radius: 2rem;
+  border: 1px solid var(--primary-orange);
   background-color: var(--primary-orange);
   color: var(--white);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  background-color: var(--medium-grey);
 }
 .btn:active {
   color: var(--primary-orange);
+  border: 1px solid var(--white);
   background-color: var(--white);
 }
 
@@ -145,12 +148,3 @@
   text-align: center;
   margin-bottom: 0.5rem;
 }
-
-/* FOOTER
-.attribution {
-  font-size: 11px;
-  text-align: end;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */

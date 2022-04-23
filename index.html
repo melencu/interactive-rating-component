@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="card">
-      <!-- Rating state start -->
+    <main class="card">
+      <!-- Rating state -->
       <div id="submit-card" class="submit-card">
         <div class="star">
           <img class="star" src="images/icon-star.svg" alt="Icon star" />
@@ -35,24 +35,28 @@
             feedback is appreciated to help us improve our offering!
           </p>
         </div>
-        <ul class="rating-list">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
+        <form class="rating-list" action="">
+          <input type="radio" id="star1" name="star" value="1" />
+          <label for="star1">1</label>
+          <input type="radio" id="star2" name="star" value="2" />
+          <label for="star2">2</label>
+          <input type="radio" id="star3" name="star" value="3" />
+          <label for="star3">3</label>
+          <input type="radio" id="star4" name="star" value="4" />
+          <label for="star4">4</label>
+          <input type="radio" id="star5" name="star" value="5" />
+          <label for="star5">5</label>
+        </form>
+
         <button class="btn">Submit</button>
       </div>
-      <!-- Rating state end -->
 
-      <!-- Thank you state start -->
+      <!-- Thank you state -->
       <div id="final-card" class="submit-card final hidden">
         <img
           src="images/illustration-thank-you.svg"
           alt="Thank you ilustration"
         />
-
         <p class="given-rating">
           You selected <span class="rating"></span> out of 5
         </p>
@@ -64,14 +68,7 @@
           </p>
         </div>
       </div>
-      <!-- Thank you state end -->
-      <!-- <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div> -->
-    </section>
+    </main>
     <script src="script.js
     "></script>
   </body>
