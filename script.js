@@ -1,5 +1,6 @@
 "strict";
 
+
 const submitCard = document.getElementById("submit-card");
 const finalCard = document.getElementById("final-card");
 const submitBtn = document.querySelector(".btn");
