@@ -84,12 +84,6 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-.submit-card .rating-list label:hover,
-.submit-card .rating-list label:visited {
-  background-color: var(--light-grey);
-  color: var(--white);
-}
-
 .submit-card .rating-list input:checked + label {
   background-color: var(--primary-orange);
   color: var(--white);
@@ -110,11 +104,21 @@ input[type="radio"] {
   background-color: var(--primary-orange);
   color: var(--white);
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.btn:hover {
-  background-color: var(--medium-grey);
+/* RESOLVES AN ISSUE FOR HOVER STATE ON MOBILE (TOUCH) DEVICES */
+@media (hover: hover) {
+  .btn:hover {
+    background-color: var(--medium-grey);
+  }
+  .submit-card .rating-list label:hover,
+  .submit-card .rating-list label:visited {
+    background-color: var(--light-grey);
+    color: var(--white);
+  }
 }
+
 .btn:active {
   color: var(--primary-orange);
   border: 1px solid var(--white);
